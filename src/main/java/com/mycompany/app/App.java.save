@@ -72,4 +72,21 @@ public class App
         return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
     }
 }
-
+ackage com.mycompany.app;
+import java.util.ArrayList;
+/**
+ * App
+ *
+ */
+public class App 
+{
+     public static boolean search(ArrayList<Integer> array,int e){
+         System.out.println("inside search");
+         if(array==null)return false;
+        
+         for(int elt : array){
+          if(elt==e)return true;  
+         }
+          return false;
+       }
+}
