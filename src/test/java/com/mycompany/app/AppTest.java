@@ -36,25 +36,35 @@ public class AppTest
     {
         assertTrue( true );
     }
-    public void testFound() {
+      public void testDogru() {
       ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
-      assertTrue(new App().search(array, 4));
+      int result = 0;
+      App app = new App();
+      result = app.toplam(array,0,1);
+      int gerceksonuc = 3;
+      assertTrue(result == gerceksonuc);
     }
-
-    public void testNotFound() {
+      public void testYanlis() {
       ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
-      assertFalse(new App().search(array, 5));
+      int result = 0;
+      App app = new App();
+      result = app.toplam(array,0,1);
+      int gerceksonuc = 3;
+      assertFalse(result != gerceksonuc);
     }
-
-    public void testEmptyArray() {
+     public void testEmptyArray() {
       ArrayList<Integer> array = new ArrayList<>();
-      assertFalse(new App().search(array, 1));
+      App app = new App();
+      int result = app.toplam(array,1,2);
+      assertTrue(result == 0);
     }
-
-    public void testNull() {
-      assertFalse(new App().search(null, 1));
-    }
-
-}
+    public void testNegative() { 
+      ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
+      App app = new App();
+      int result = app.toplam(array,-1,0);
+      assertFalse(result != 0);
+     
+    } 
+} 
     
 
